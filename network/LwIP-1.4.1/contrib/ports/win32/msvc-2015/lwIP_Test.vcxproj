@@ -14,19 +14,20 @@
     <ProjectName>lwIP_test</ProjectName>
     <ProjectGuid>{8CC0CE51-32CF-4585-BFAF-A9343BC5A96D}</ProjectGuid>
     <RootNamespace>lwIP_test</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -79,7 +80,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Packet.lib;wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\Release/$(ProjectName).exe</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\..\..\WpdPack\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>.\Release/$(ProjectName).pdb</ProgramDatabaseFile>
@@ -114,7 +115,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Packet.lib;wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\Debug/$(ProjectName).exe</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\..\..\WpdPack\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
